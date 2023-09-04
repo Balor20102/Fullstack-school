@@ -19,9 +19,10 @@
         echo "<table><tr><th>ID</th><th>Username</th><th>Password</th><th>Role</th></tr>";
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            echo "<tr><td>".$row["idUsers"]."</td><td>".$row["Username"]."</td><td>".$row["password"]."</td><td>".$row["admin"]."</td></tr>";
+            echo "<tr><td>".$row["ID"]."</td><td>".$row["username"]."</td><td>".$row["password"]."</td><td>".$row["admin"]."</td></tr>";
         }}
-        else {
-            echo "0 results";
-        }
+
 ?>
+<body>
+    <a href="home.php">Home</a>
+</body>
