@@ -22,7 +22,7 @@
                 if (isset($_SESSION["admin"]) && $_SESSION["admin"] == 1) {
                     echo "<li><a href='admin_panel.php'>Admin Panel</a></li>";
                 }
-                if (isset($_SESSION['username']) && $_SESSION["username"]) {
+                if (isset($_SESSION['username'])) {
                     echo "<li><a href='logout.php'>Logout</a></li>";
                 }else {
                     echo "<li><a href='login.php'>Login</a></li>";
