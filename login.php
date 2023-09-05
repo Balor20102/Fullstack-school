@@ -9,13 +9,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
         // Query the database for the user
-        $sql = "SELECT id, username, password FROM users WHERE username = ?";
+        $sql = "SELECT id, username, password, admin FROM users WHERE username = ?";
         $stmt = $conn->prepare($sql);
         $stmt->execute([$username]);
         $user = $stmt->fetch();
 
     // Check if the user exists and verify the password
-    if ($user && password_verify($password, $user["password"])) {
+    if ($user && password_verify($password, $user["password"]) && $user["admin"] == 1) {
         $_SESSION["user_id"] = $user["id"];
         $_SESSION["username"] = $user["username"];
         header("Location: admin_panel.php");
