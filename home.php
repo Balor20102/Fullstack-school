@@ -1,7 +1,6 @@
 <?php
+    session_start();
     require 'dbconection.php';
-    
-
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +15,7 @@
         <a href="home.php">Home</a>
         <a href="login.php">Login</a>
     </aside>
-    
+
     <h1>Home</h1>
 
 </body>
