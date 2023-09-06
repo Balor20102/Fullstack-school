@@ -34,7 +34,7 @@ if (!isset($_SESSION["username"]) || $_SESSION["admin"] != 1) {
                         echo "<tr>";
                         echo "<td>" . $row["name"] . "</td>";
                         echo "<td>" . $row["description"] . "</td>";
-                        echo "<td><a href='edit_services.php?id=" . $row["id"] . "'>Edit</a> <a href='delete_services_type.php?id=" . $row["id"] . "'>Delete</a></td>";
+                        echo "<td><a href='edit_services.php?id=" . $row["id"] . "'>Edit</a> <a href='delete_services.php?id=" . $row["id"] . "'>Delete</a></td>";
                         echo "</tr>";
                     }
                 }
