@@ -20,6 +20,7 @@ if (!isset($_SESSION["username"]) || $_SESSION["admin"] != 1) {
         <?php require 'sidebar_admin.php'; ?>
         <div class="content">
             <h2>Bungalow Type</h2>
+            <a href="add_bungalow_type.php">Add new bungalow type</a>
             <table>
                 <tr>
                     <th>Naam</th>
@@ -32,14 +33,13 @@ if (!isset($_SESSION["username"]) || $_SESSION["admin"] != 1) {
                     while ($row = $result->fetch(PDO::FETCH_ASSOC)) { // Use PDO's FETCH_ASSOC
                         echo "<tr>";
                         echo "<td>" . $row["name"] . "</td>";
-                        echo "<td><a href='edit_bungalow_type.php?id=" . $row["name"] . "'>Edit</a> <a href='delete_bungalow_type.php?id=" . $row["name"] . "'>Delete</a></td>";
+                        echo "<td><a href='edit_bungalow_type.php?id=" . $row["id"] . "'>Edit</a> <a href='delete_bungalow_type.php?id=" . $row["id"] . "'>Delete</a></td>";
                         echo "</tr>";
                     }
                 }
                 ?>
 
             </table>
-            <a href="add_bungalow_type.php">Add new bungalow type</a>
         </div>
     </body>
 </html>
