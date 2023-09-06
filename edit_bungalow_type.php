@@ -19,7 +19,6 @@ $stmt->execute();
 
 // Fetch the result
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
-print_r($result);
 ?>
 
 <!DOCTYPE html>
