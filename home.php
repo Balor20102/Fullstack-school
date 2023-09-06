@@ -23,9 +23,9 @@
                     echo "<li><a href='admin_panel.php'>Admin Panel</a></li>";
                 }
                 if (isset($_SESSION['username'])) {
-                    echo "<li><a href='logout.php'>Logout</a></li>";
+                    echo "<li><a href='login/logout.php'>Logout</a></li>";
                 }else {
-                    echo "<li><a href='login.php'>Login</a></li>";
+                    echo "<li><a href='login/login.php'>Login</a></li>";
                 }
             ?>
         </ul>

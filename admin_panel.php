@@ -17,6 +17,6 @@ $username = $_SESSION["username"];
 </head>
 <body>
     <h2>Welcome, <?php echo $username; ?>!</h2>
-    <?php require 'sidebar_admin.php'; ?>
+    <?php require 'components/sidebar_admin.php'; ?>
 </body>
 </html>
