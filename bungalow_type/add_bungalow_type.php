@@ -1,9 +1,9 @@
 <?php
     session_start();
-    require 'dbconection.php';
+    require '../dbconection.php';
 
 if (!isset($_SESSION["username"]) || $_SESSION["admin"] != 1) {
-    header("Location: home.php");
+    header("Location: ../home.php");
     exit();
 }
 
@@ -18,7 +18,7 @@ if (!isset($_SESSION["username"]) || $_SESSION["admin"] != 1) {
     </head>
     <body>
         <h2>Welcome, <?php echo $_SESSION["username"]; ?>!</h2>
-        <?php require 'sidebar_admin.php'; ?>
+        <?php require '../components/sidebar_admin.php'; ?>
         <div class="content">
             <h2>Add bungalow type</h2>
             <form action="add_bungalow_type.php" method="post">

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require 'dbconection.php';
+    require '../dbconection.php';
 // Check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Replace these with your actual credentials validation logic
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user_id"] = $user["id"];
         $_SESSION["username"] = $user["username"];
         $_SESSION["admin"] = $user["admin"];
-        header("Location: home.php");
+        header("Location: ../home.php");
         exit();
     } else {
         $error = "Invalid username or password.";
