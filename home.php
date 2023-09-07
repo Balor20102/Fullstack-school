@@ -19,6 +19,7 @@
             </li>
 
             <?php
+
                 if (isset($_SESSION["admin"]) && $_SESSION["admin"] == 1) {
                     echo "<li><a href='admin_panel.php'>Admin Panel</a></li>";
                 }

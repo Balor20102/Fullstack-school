@@ -9,7 +9,7 @@ if (!isset($_SESSION["username"]) || $_SESSION["admin"] != 1) {
 
 $id = $_GET["id"];
 
-$stmt = $conn->prepare("SELECT * FROM typen WHERE id = :id");
+$stmt = $conn->prepare("SELECT * FROM bungalow_type WHERE id = :id");
 
 // Bind the ID value to the placeholder
 $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -47,7 +47,7 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST["name"];
         try {
-            $sql = "UPDATE typen SET name = :newData WHERE id = :id";
+            $sql = "UPDATE bungalow_type SET name = :newData WHERE id = :id";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':newData', $name, PDO::PARAM_STR);
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
