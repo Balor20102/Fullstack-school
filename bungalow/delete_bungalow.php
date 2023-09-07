@@ -10,7 +10,7 @@ if (!isset($_SESSION["username"]) || $_SESSION["admin"] != 1) {
 
 $id = $_GET["id"];
 
-$stmt = $conn->prepare("DELETE FROM bungalow_type WHERE id = :id");
+$stmt = $conn->prepare("DELETE FROM bungalows WHERE id = :id");
 
 // Bind the ID value to the placeholder
 $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -20,7 +20,7 @@ $stmt->execute();
 
 if ($stmt->rowCount() > 0) {
     echo "Delete successful!";
-    header("Location: bungalow_type.php");
+    header("Location: bungalow.php");
 } else {
     echo "Delete failed!";
 }

@@ -30,7 +30,7 @@ if (!isset($_SESSION["username"]) || $_SESSION["admin"] != 1) {
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $name = $_POST["name"];
 
-                $sql = "INSERT INTO typen (name) VALUES (?)";
+                $sql = "INSERT INTO bungalow_type (name) VALUES (?)";
                 $stmt = $conn->prepare($sql);
 
                 if ($stmt->execute([$name])) {

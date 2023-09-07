@@ -26,7 +26,7 @@ if (!isset($_SESSION["username"]) || $_SESSION["admin"] != 1) {
                     <th>Naam</th>
                 </tr>
                 <?php
-                $sql = "SELECT * FROM typen";
+                $sql = "SELECT * FROM bungalow_type";
                 $result = $conn->query($sql);
 
                 if ($result) {

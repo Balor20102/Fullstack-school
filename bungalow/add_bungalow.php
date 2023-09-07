@@ -27,7 +27,7 @@ if (!isset($_SESSION["username"]) || $_SESSION["admin"] != 1) {
                 <label for="type">Type:</label><br>
                 <select name="type" id="type">
                     <?php
-                    $sql = "SELECT * FROM typen";
+                    $sql = "SELECT * FROM bungalow_type";
                     $result = $conn->query($sql);
 
                     if ($result) {
@@ -65,7 +65,6 @@ if (!isset($_SESSION["username"]) || $_SESSION["admin"] != 1) {
                 $target_dir = "../uploads/";
                 
                 $currentDateTime = date('Y-m-d-H-i-s');
-                echo "File upload error code: " . $_FILES["photo"]["error"];
                 $originalFileName = basename($_FILES["photo"]["name"]);
                 $imageFileType = strtolower(pathinfo($originalFileName, PATHINFO_EXTENSION));
                 $uniqueFileName = $currentDateTime . "." . mt_rand(100,999). "." . $imageFileType;
@@ -101,7 +100,7 @@ if (!isset($_SESSION["username"]) || $_SESSION["admin"] != 1) {
                     $stmt->execute();
                 }
 
-                // header("Location: bungalow.php");
+                header("Location: bungalow.php");
             }
             ?>
         </div>

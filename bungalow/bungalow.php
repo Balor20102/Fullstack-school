@@ -33,7 +33,7 @@ if (!isset($_SESSION["username"]) || $_SESSION["admin"] != 1) {
                     while ($row = $result->fetch(PDO::FETCH_ASSOC)) { // Use PDO's FETCH_ASSOC
                         echo "<tr>";
                         echo "<td>" . $row["name"] . "</td>";
-                        echo "<td><a href='edit_bungalow.php?id=" . $row["idbungalows"] . "'>Edit</a> <a href='delete_bungalow.php?id=" . $row["idbungalows"] . "'>Delete</a></td>";
+                        echo "<td><a href='edit_bungalow.php?id=" . $row["id"] . "'>Edit</a> <a href='delete_bungalow.php?id=" . $row["id"] . "'>Delete</a></td>";
                         echo "</tr>";
                     }
                 }
